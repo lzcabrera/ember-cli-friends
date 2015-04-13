@@ -3,12 +3,14 @@
     <tr>
       <th>Name</th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     {{#each friend in model}}
       <tr>
         <td>{{link-to friend.fullName "articles" friend}}</td>
+        <td>{{link-to "Lend articles" "articles.new" friend}}</td>
         <td><a href="#" {{action "delete" friend}}>Delete</a></td>
       </tr>
     {{/each}}
