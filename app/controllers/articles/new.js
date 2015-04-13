@@ -2,11 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   // hasDescription: Ember.computed.notEmpty('description'),
-  // hasNotes: Ember.computed.notEmpty('notes'),
-  // isValid: Ember.computed.and('hasDescription', 'hasNotes'),
+  // hasNotes:       Ember.computed.notEmpty('notes'),
+  // isValid:        Ember.computed.and('hasDescription', 'hasNotes'),
 
-  //isValid: Ember.computed.notEmpty('description'),
-  //
   isValid: Ember.computed(
     'model.description',
     function(){
@@ -18,7 +16,7 @@ export default Ember.Controller.extend({
       if(this.get('isValid')) {
         return true;
       } else {
-        this.set('errorMessage', 'You have to fill all the fields. xxx');
+        this.set('errorMessage', 'You have to fill all the fields.');
         return false;
       }
     }
