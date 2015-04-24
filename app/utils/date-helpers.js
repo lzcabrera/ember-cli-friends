@@ -1,7 +1,5 @@
-import { format } from 'borrowers-dates';
-
-function formatDate(date) {
-  return format(date);
+function formatDate(date, format) {
+  return window.moment(date).format(format);
 }
 
 export {
